@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scoreboard</title>
+
+    <script>
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 5000);
+    </script>
+
+</head>
+<body>
+
+<h2>Live Scoreboard</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Username</th>
+        <th>Rounds Completed</th>
+    </tr>
+
+    {% for player in players %}
+    <tr>
+        <td>{{ player.username }}</td>
+        <td>{{ player.progress }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<p>Auto refresh every 5 seconds</p>
+
+</body>
+</html>
